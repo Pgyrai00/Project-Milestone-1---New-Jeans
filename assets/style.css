@@ -46,7 +46,6 @@ main {
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(16px);
   background: rgba(247, 245, 249, 0.92);
   border-bottom: 1px solid rgba(26, 23, 35, 0.06);
 }
@@ -63,6 +62,7 @@ main {
   letter-spacing: 0.14em;
   font-size: 0.9rem;
   text-transform: uppercase;
+  color: rgba(131, 172, 241, 0.89)
 }
 
 .nav-links {
@@ -113,26 +113,26 @@ main {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: 2.5rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+
+  color: rgba(131, 172, 241, 0.89)
 }
 
 .hero-subtitle {
-  font-size: 1.05rem;
+  font-size: 1rem;
   max-width: 24rem;
-  color: #4c465c;
+  color: #322c43;
 }
 
 .hero-tagline {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.85rem;
   letter-spacing: 0.16em;
-  text-transform: uppercase;
   color: #7c7790;
 }
 
@@ -141,67 +141,6 @@ main {
   height: 7px;
   border-radius: 999px;
   background: linear-gradient(135deg, #e66aa5, #f6c57b);
-}
-
-.hero-card {
-  border-radius: 1.75rem;
-  padding: 1.4rem;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow:
-    0 22px 60px rgba(38, 22, 60, 0.09),
-    0 0 0 1px rgba(116, 108, 150, 0.06);
-}
-
-.hero-card-inner {
-  border-radius: 1.25rem;
-  background:
-    linear-gradient(145deg, rgba(250, 244, 255, 0.95), rgba(255, 243, 251, 0.98)),
-    url("https://images.pexels.com/photos/7103046/pexels-photo-7103046.jpeg?auto=compress&cs=tinysrgb&w=1200");
-  background-size: cover;
-  background-position: center;
-  padding: 1.5rem;
-  color: #201826;
-  min-height: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hero-card-top {
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.hero-card-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.86);
-  font-size: 0.7rem;
-}
-
-.hero-card-label-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: #e66aa5;
-}
-
-.hero-card-title {
-  margin-top: 1.4rem;
-  font-size: 1.25rem;
-  max-width: 16rem;
-}
-
-.hero-card-meta {
-  margin-top: 1.6rem;
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.8rem;
-  opacity: 0.85;
 }
 
 /* Sections */
@@ -213,7 +152,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 1.75rem;
+   color: #4914c3;
 }
 
 .section-title {
@@ -239,45 +178,8 @@ section {
   color: #3e374e;
 }
 
-.about-meta {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.4rem;
-  margin-top: 1.8rem;
-}
 
-.about-pill {
-  padding: 0.9rem 1rem;
-  border-radius: 1.1rem;
-  background: #ffffff;
-  box-shadow: 0 16px 40px rgba(38, 22, 60, 0.05);
-  font-size: 0.8rem;
-}
 
-.about-pill-label {
-  text-transform: uppercase;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  color: #9b93af;
-  margin-bottom: 0.25rem;
-}
-
-.about-pill-main {
-  font-weight: 500;
-}
-
-.about-side {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  font-size: 0.9rem;
-  color: #5c5672;
-}
-
-.about-note {
-  border-left: 2px solid rgba(230, 106, 165, 0.6);
-  padding-left: 0.9rem;
-}
 
 /* Background / imagery section */
 .background-grid {
@@ -306,33 +208,23 @@ section {
   transform: scale(1.02);
 }
 
-.background-text {
-  font-size: 0.95rem;
-  color: #3e374e;
-}
-
-.background-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 1.4rem;
-}
 
 .tag {
   padding: 0.35rem 0.7rem;
-  border-radius: 999px;
+  border-radius: 50px;
   border: 1px solid rgba(155, 147, 175, 0.3);
   font-size: 0.75rem;
   color: #6a647d;
 }
+
 
 /* Video section */
 .video-wrapper {
   position: relative;
   border-radius: 1.4rem;
   overflow: hidden;
-  background: #0e0c13;
-  box-shadow: 0 20px 60px rgba(14, 12, 19, 0.7);
+  background: #766a94;
+  box-shadow: 0 20px 60px rgba(112, 97, 149, 0.2);
   aspect-ratio: 16 / 9;
 }
 
@@ -364,7 +256,7 @@ section {
 
 .card {
   background: #ffffff;
-  border-radius: 1.1rem;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 18px 40px rgba(38, 22, 60, 0.06);
   display: flex;
@@ -391,6 +283,7 @@ section {
   font-size: 0.78rem;
   color: #827a95;
 }
+
 
 /* Footer */
 .footer {
